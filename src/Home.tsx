@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { useEffect, useState } from "react";
 import styled from "styled-components";
 import Countdown from "react-countdown";
@@ -18,6 +19,7 @@ import {
   mintOneToken,
   shortenAddress,
 } from "./candy-machine";
+import { Opacity } from "@material-ui/icons";
 
 const ConnectButton = styled(WalletDialogButton)``;
 
@@ -167,26 +169,54 @@ const Home = (props: HomeProps) => {
 
   return (
     <main>
-      {wallet && (
+      {/* {wallet && (
         <p>Wallet {shortenAddress(wallet.publicKey.toBase58() || "")}</p>
       )}
 
-      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>}
+      {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>} */}
 
-      {wallet && <p>Total Available: {itemsAvailable}</p>}
+      {wallet && (
+        <p>
+          {itemsRedeemed} / {itemsAvailable} Minted
+        </p>
+      )}
 
-      {wallet && <p>Redeemed: {itemsRedeemed}</p>}
+      {/* {wallet && <p>Redeemed: {itemsRedeemed}</p>}
 
-      {wallet && <p>Remaining: {itemsRemaining}</p>}
+      {wallet && <p>Remaining: {itemsRemaining}</p>} */}
 
       <MintContainer>
         {!wallet ? (
-          <ConnectButton>Connect Wallet</ConnectButton>
+          <ConnectButton
+            style={{
+              borderStyle: "solid",
+              borderWidth: "2px",
+              borderColor: "#ffadde",
+              borderRadius: "40px",
+              backgroundColor: "rgba(252, 124, 197, 0.8)",
+              minWidth: "150px",
+              justifyContent: "center",
+              fontWeight: "bold",
+            }}
+          >
+            Connect Wallet
+          </ConnectButton>
         ) : (
           <MintButton
             disabled={isSoldOut || isMinting || !isActive}
             onClick={onMint}
             variant="contained"
+            style={{
+              borderStyle: "solid",
+              borderWidth: "2px",
+              borderColor: "#ffadde",
+              borderRadius: "40px",
+              backgroundColor: "rgba(252, 124, 197, 0.8)",
+              minWidth: "150px",
+              color: "#fff",
+              justifyContent: "center",
+              fontWeight: "bold",
+            }}
           >
             {isSoldOut ? (
               "SOLD OUT"
