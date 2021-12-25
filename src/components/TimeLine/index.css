@@ -106,6 +106,29 @@
   letter-spacing: 2px;
 }
 
+.container.left .content {
+  opacity: 0;
+  transform: translateX(-15%);
+  transition: all 2s ease;
+}
+
+.container.right .content {
+  opacity: 0;
+  transform: translateX(15%);
+  transition: all 2.5s ease;
+}
+
+.container.left .content.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.container.right .content.active {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+
 @media screen and (max-width: 600px) {
   .roadmap h1 {
     font-size: 42px;
@@ -136,4 +159,3 @@
   left: 0%;
   }
 }
-
