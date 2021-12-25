@@ -106,18 +106,6 @@
   letter-spacing: 2px;
 }
 
-.container.left .content {
-  transform: translateX(-200%);
-}
-
-.container.right .content {
-  transform: translateX(200%);
-}
-
-.container.left .content.active {
-  transform: translateX(0%);
-}
-
 @media screen and (max-width: 600px) {
   .roadmap h1 {
     font-size: 42px;
