@@ -1,0 +1,52 @@
+.navbar {
+  display: flex;
+  justify-content: center;
+  padding: 20px 60px;
+}
+
+.wrapper-navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  max-width: 1400px;
+}
+
+.sosmed {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.logo {
+  width: 180px;
+  height: 180px;
+}
+
+.discord-icon {
+  width: 60px;
+}
+
+.twitter-icon {
+  width: 86px;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .logo {
+    width: 120px;
+    height: 120px;
+  }
+
+  .discord-icon {
+    width: 40px;
+  }
+
+  .twitter-icon {
+    width: 66px;
+  }
+}
