@@ -4,7 +4,9 @@ import './index.css'
 const Footer = () => {
   return (
     <div className="footer">
-      2021 COPYRIGHT @SOLANADOODLEPUNKS.IO
+      <p>
+        2021 COPYRIGHT @SOLANADOODLEPUNKS.IO
+      </p>
     </div>
   )
 }
