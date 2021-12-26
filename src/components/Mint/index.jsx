@@ -8,7 +8,7 @@ const MintSection = () => {
     <div className="mint">
       <img src={Giphy} alt="" className="gif-doodles" />
       <h2>Mint a Doodle punks</h2>
-      <span className="qty">0.12 SOL</span>
+      <span className="qty">Price 0.12 SOL</span>
       <App />
     </div>
   )
