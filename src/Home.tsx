@@ -174,17 +174,22 @@ const Home = (props: HomeProps) => {
       )}
 
       {wallet && <p>Balance: {(balance || 0).toLocaleString()} SOL</p>} */}
-
       {wallet && (
-        <p style={{ color: "white", fontWeight: "bold", textAlign: "center" }}>
+        <p
+          style={{
+            fontSize: "24px",
+            fontWeight: "bold",
+            color: "white",
+            textAlign: "center",
+            textShadow: "1px 2px 1px black",
+          }}
+        >
           {itemsRedeemed} / {itemsAvailable} Minted
         </p>
       )}
-
       {/* {wallet && <p>Redeemed: {itemsRedeemed}</p>}
 
       {wallet && <p>Remaining: {itemsRemaining}</p>} */}
-
       <MintContainer>
         {!wallet ? (
           <ConnectButton
@@ -237,7 +242,6 @@ const Home = (props: HomeProps) => {
           </MintButton>
         )}
       </MintContainer>
-
       <Snackbar
         open={alertState.open}
         autoHideDuration={6000}
